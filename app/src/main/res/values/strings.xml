@@ -1,7 +1,21 @@
 <resources>
     <string name="app_name">fouralabs</string>
 
+    <string name="next">İleri</string>
+    <string name="skip">Atla</string>
+    <string name="start">Giriş</string>
 
 
+
+
+    //login screen
+    <string name="login_brand_title">Socially Giriş</string>
+    <string name="login_user_mail">Kullanıcı E-mail</string>
+    <string name="login_user_password">Kullanıcı Şifresi</string>
+    <string name="login_btn_title">Giriş Yap</string>
+
+    //post screen
+    <string name="comment_entry_title">Yorum Yaz...</string>
+    <string name="upload_btn_title">Gönder</string>
 
 </resources>

@@ -1,4 +1,4 @@
-package com.arcsavunma.fouralabs;
+package com.arcsavunma.fouralabs.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -8,12 +8,13 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
 
+import com.arcsavunma.fouralabs.R;
 import com.arcsavunma.fouralabs.databinding.ActivityMainBinding;
-import com.arcsavunma.fouralabs.ui.ChatFragment;
-import com.arcsavunma.fouralabs.ui.FavoritesFragment;
-import com.arcsavunma.fouralabs.ui.MainFragment;
-import com.arcsavunma.fouralabs.ui.PostFragment;
-import com.arcsavunma.fouralabs.ui.ProfileFragment;
+import com.arcsavunma.fouralabs.view.ui.ChatFragment;
+import com.arcsavunma.fouralabs.view.ui.FavoritesFragment;
+import com.arcsavunma.fouralabs.view.ui.MainFragment;
+import com.arcsavunma.fouralabs.view.ui.PostFragment;
+import com.arcsavunma.fouralabs.view.ui.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
         //next buttonu karenin siyah versiyonu
+
+        replaceFragment(new MainFragment());
+
 
 
         //bottom nav menu fragment choose

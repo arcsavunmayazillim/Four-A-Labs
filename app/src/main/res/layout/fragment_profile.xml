@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ProfileFragment">
+    tools:context=".view.ui.ProfileFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,23 +15,137 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_weight="3">
-
+            android:background="#E1F6F4"
+            android:layout_weight="4">
+            <ImageView
+                android:id="@+id/profile_back_to_main_imageview"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/back_to_main_icon"
+                />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_weight="3">
+            android:background="@drawable/profilebackground"
+            android:layout_weight="3"
+            android:weightSum="9">
 
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/portrait"
+                app:civ_border_width="3dp"
+                android:layout_weight="2"
+                app:civ_border_color="#ffffff"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="3.5"
+                android:weightSum="4"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="2"
+                    android:weightSum="9">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:text="Posts"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:text="Followers"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:text="Follows"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="2"
+                    android:weightSum="9">
+                    <TextView
+                        android:id="@+id/profile_post_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:text="--"/>
+                    <TextView
+                        android:id="@+id/profile_user_followers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:text="--"/>
+                    <TextView
+                        android:id="@+id/profile_user_follows"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:text="--"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="3.5"
+                >
+            </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_weight="3">
-
+            android:weightSum="3"
+            android:layout_weight="2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="2"
+                android:layout_weight="2.8"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/profile_image"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/profile_saved_icon"/>
+            </LinearLayout>
             <androidx.recyclerview.widget.RecyclerView
+                android:layout_weight="0.2"
                 android:id="@+id/profile_recyclerview"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>

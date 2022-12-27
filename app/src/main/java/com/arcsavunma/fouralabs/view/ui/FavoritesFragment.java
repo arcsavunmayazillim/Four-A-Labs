@@ -1,4 +1,4 @@
-package com.arcsavunma.fouralabs.ui;
+package com.arcsavunma.fouralabs.view.ui;
 
 import android.os.Bundle;
 

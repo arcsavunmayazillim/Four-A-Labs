@@ -1,9 +1,10 @@
-package com.arcsavunma.fouralabs.model;
+package com.arcsavunma.fouralabs.model.user;
 
 public class UserProfile {
-    String userName, userSurname, userNickName, userPosts, userFollowers, userFollows, userPostUrl;
+    String userMail, userName, userSurname, userNickName, userPosts, userFollowers, userFollows, userPostUrl;
 
-    public UserProfile(String userName, String userSurname, String userNickName, String userPosts, String userFollowers, String userFollows, String userPostUrl) {
+    public UserProfile(String userMail,String userName, String userSurname, String userNickName, String userPosts, String userFollowers, String userFollows, String userPostUrl) {
+        this.userMail = userMail;
         this.userName = userName;
         this.userSurname = userSurname;
         this.userNickName = userNickName;
@@ -12,7 +13,12 @@ public class UserProfile {
         this.userFollows = userFollows;
         this.userPostUrl = userPostUrl;
     }
-
+    public String getUserMail() {
+        return userMail;
+    }
+    public void setUserMail(String userMail) {
+        this.userMail = userMail;
+    }
     public String getUserName() {
         return userName;
     }

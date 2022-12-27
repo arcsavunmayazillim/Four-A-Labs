@@ -3,8 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainFragment">
+    tools:context=".view.ui.MainFragment"
+    android:background="@drawable/loginbackground">
 
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_post_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </FrameLayout>
